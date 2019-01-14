@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9103303d-9c6e-4ebc-9aa2-d53c9fe280d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/calculates_results_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculates_results_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/print_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/print_results.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,11 +56,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/calculates_results_stats.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="422">
+                <state relative-caret-position="528">
                   <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/print_results.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="376">
+                  <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -110,6 +119,7 @@
         <option value="$PROJECT_DIR$/check_images.py" />
         <option value="$PROJECT_DIR$/adjust_results4_isadog.py" />
         <option value="$PROJECT_DIR$/calculates_results_stats.py" />
+        <option value="$PROJECT_DIR$/print_results.py" />
       </list>
     </option>
   </component>
@@ -211,12 +221,12 @@
       <option name="presentableId" value="Default" />
       <updated>1546687393734</updated>
       <workItem from="1546687395228" duration="309000" />
-      <workItem from="1546687774120" duration="16267000" />
+      <workItem from="1546687774120" duration="18460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16576000" />
+    <option name="totallyTimeSpent" value="18769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -304,8 +314,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/calculates_results_stats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
+        <state relative-caret-position="528">
           <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/print_results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
         </state>
       </provider>
     </entry>

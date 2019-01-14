@@ -61,6 +61,16 @@ def print_results(results_dic, results_stats_dic, model,
                               False doesn't print anything(default) (bool) 
     Returns:
            None - simply printing results.
-    """    
-    None
-                
+    """
+    print("Model: " + model)
+    print("Number of Images: " + results_stats_dic["n_images"])
+    print("Number of Images: " + results_stats_dic["n_dogs_img"])
+    print("Number of Images: " + results_stats_dic["n_notdogs_img"])
+
+    for key, value in results_stats_dic.items():
+        if key.startswith('pct'):
+            print('% ' + key.replace('pct_', '').replace('_', ' ').title())
+
+
+
+
