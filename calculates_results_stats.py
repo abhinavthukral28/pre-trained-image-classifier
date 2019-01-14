@@ -69,5 +69,38 @@ def calculates_results_stats(results_dic):
                      on how to calculate the counts and statistics.
     """        
     # Replace None with the results_stats_dic dictionary that you created with 
-    # this function 
-    return None
+    # this function
+    results_stats_dic = dict()
+    Z = len(results_dic)    # Number of Images
+    A = 0   # Number of Correct Dog Matches
+    B = 0   # Number of Dog Images
+    C = 0   # Number of correct non dog images
+    D = 0   # Number of Not dog images
+    E = 0   # Number of correct breed matches
+    Y = 0   # Number of label matches
+
+    for filename, result in results_dic.items():
+        B += result[3]
+        Y += result[2]
+        if result[3] == 1 and result[4] ==1:
+            A += 1
+        elif result[3] == 0 and result[4] == 0:
+            C += 1
+        if result[2] == 1 and result[3] == 1:
+            E += 1
+
+    D = Z - B
+    results_stats_dic["n_images"] = Z
+    results_stats_dic["n_dogs_img"] = B
+    results_stats_dic["n_notdogs_img"] = D
+    results_stats_dic["n_match"] = Y
+    results_stats_dic["n_correct_dogs"] = A
+    results_stats_dic["n_correct_notdogs"] = C
+    results_stats_dic["n_correct_breed"] = E
+
+    results_stats_dic["pct_match"] = A/B * 100
+    results_stats_dic["pct_correct_dogs"] = Y/Z * 100
+    if not D == 0:
+        results_stats_dic["pct_correct_notdogs"] = C/D * 100
+    results_stats_dic["pct_correct_breed"] = E/B * 100
+    return results_stats_dic
