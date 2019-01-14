@@ -22,7 +22,6 @@
 ##
 # Imports classifier function for using CNN to classify images 
 from classifier import classifier
-from os import listdir
 
 # TODO 3: Define classify_images function below, specifically replace the None
 #       below by the function definition of the classify_images function. 

@@ -98,8 +98,8 @@ def calculates_results_stats(results_dic):
     results_stats_dic["n_correct_notdogs"] = C
     results_stats_dic["n_correct_breed"] = E
 
-    results_stats_dic["pct_match"] = A/B * 100
-    results_stats_dic["pct_correct_dogs"] = Y/Z * 100
+    results_stats_dic["pct_match"] = Y/Z * 100
+    results_stats_dic["pct_correct_dogs"] = A/B * 100
     if not D == 0:
         results_stats_dic["pct_correct_notdogs"] = C/D * 100
     results_stats_dic["pct_correct_breed"] = E/B * 100

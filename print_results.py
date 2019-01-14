@@ -30,7 +30,9 @@
 #       below by the function definition of the print_results function. 
 #       Notice that this function doesn't to return anything because it  
 #       prints a summary of the results using results_dic and results_stats_dic
-# 
+#
+
+
 def print_results(results_dic, results_stats_dic, model, 
                   print_incorrect_dogs = False, print_incorrect_breed = False):
     """
@@ -63,13 +65,24 @@ def print_results(results_dic, results_stats_dic, model,
            None - simply printing results.
     """
     print("Model: " + model)
-    print("Number of Images: " + results_stats_dic["n_images"])
-    print("Number of Images: " + results_stats_dic["n_dogs_img"])
-    print("Number of Images: " + results_stats_dic["n_notdogs_img"])
+    print("Number of Images: {}".format(results_stats_dic["n_images"]))
+    print("Number of Dog Images: {}".format(results_stats_dic["n_dogs_img"]))
+    print('Number of "Not-a" Dog Images: {}'.format(results_stats_dic["n_notdogs_img"]))
 
     for key, value in results_stats_dic.items():
         if key.startswith('pct'):
-            print('% ' + key.replace('pct_', '').replace('_', ' ').title())
+            print('% ' + key.replace('pct_', '').replace('_', ' ').title().replace("Notdogs", '"Not-a" Dog')+ ": {}".format(value))
+    if print_incorrect_dogs and (results_stats_dic["n_correct_dogs"] + results_stats_dic["n_correct_notdogs"] != results_stats_dic["n_images"]):
+        print("Incorrect Dogs")
+        for key, value in results_dic.items():
+            if sum(value[3:]) == 1:
+                print("Pet Label: {}    Classifier: {}".format(value[0], value[1]))
+
+    if print_incorrect_breed and (results_stats_dic["n_correct_dogs"] != results_stats_dic["n_correct_breed"]):
+        print("Incorrect Breeds")
+        for key, value in results_dic.items():
+            if sum(value[3:]) == 2 and value[2] == 0:
+                print("Pet Label: {}    Classifier: {}".format(value[0], value[1]))
 
 
 
